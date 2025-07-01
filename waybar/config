@@ -1,0 +1,21 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["sway/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio"],
+
+  "sway/workspaces": {
+    "format": "{name}",
+    "disable-scroll": true
+  },
+
+  "clock": {
+    "format": "{:%H:%M:%S}"
+  },
+
+  "pulseaudio": {
+    "format": " {volume}%",
+    "on-click": "pavucontrol"
+  }
+}

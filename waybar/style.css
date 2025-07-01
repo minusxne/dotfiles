@@ -1,0 +1,19 @@
+* {
+font-family: "JetBrains Mono Nerd Font", monospace;
+font-size: 12px;
+color: #ddd;
+background: #222;
+}
+
+#clock {
+font-weight: bold;
+color: #aabbcc;
+}
+
+#workspaces {
+padding-left: 10px;
+}
+
+#tray {
+padding-right: 10px;
+}
