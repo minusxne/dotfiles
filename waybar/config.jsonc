@@ -1,62 +1,67 @@
 {
+  "name": "bar1",
   "layer": "top",
-  "position": "top",
   "output": "HDMI-A-1",
-  "margin-top": 5,
-  "modules-left": ["clock", "hyprland/workspaces"],
-  "modules-center": [],
-  "modules-right": ["custom/weather", "group/volight","group/wifibt","custom/notification"],
+  "position": "top",
+  "height": 25,
+  //"width": 10,
+  "spacing": 5,
+  "modules-left": ["cpu", "memory", "disk", "temperature"],
+  "modules-center": ["clock"],
+  "modules-right": ["hyprland/workspaces", "custom/bluetooth","pulseaudio"],
 
-  "group/volight":{
-      "orientation": "inherit",
-      "drawer": {
-        "transition-duration": 500,
-        "children-class": "not-power",
-        "transition-left-to-right": true,
-        "click-to-reveal": true
-      },
-      "modules": [
-        "custom/volight",
-        "pulseaudio",
-        "backlight"
-      ]
-    },
-
-  "height": 20,
-
-  "custom/volight":{
-    "format" : "󰕾 "
+  "custom/battery": {
+    "exec": "~/.config/waybar/custom/battery.sh",
+    "interval": 1,
+    "return-type": "json"
   },
 
-  "custom/notification": {
-    "tooltip": false,
+  "clock": {
+    "format": "{:%H:%M:%S}",
+    "interval": 1,
+    "tooltip": false
+  },
+
+"custom/bluetooth": {
+    "format": "",               // Bluetooth icon
+    "tooltip": "Open Bluetooth Manager",
+    "on-click": "blueman-manager", // Command to execute
+    "interval": 0                 // Don’t refresh automatically
+} ,
+
+
+  "custom/network": {
+    "exec": "~/.config/waybar/custom/network.sh",
+    "interval": 3,
+    "tooltip": true,
+    "return-type": "json"
+  },
+
+"hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "notification": "<span foreground='red'><sup></sup></span>",
-      "none": "",
-      "dnd-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-none": "",
-      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "inhibited-none": "",
-      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-inhibited-none": ""
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10"
     },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
+    "persistent-workspaces": {
+      "*": 3 // 5 workspaces by default on every monitor
+    },
+    "sort-by-number": true
   },
 
-  "custom/launcher": {
-    "format": "",
-    "on-click": "bash /home/$USER/.config/waybar/scripts/app_launcher.sh",
-    "tooltip-format": "Launch your favorite apps"
-  },
+
+
 
     "pulseaudio": {
-    "format": "{volume}%",
+    "format": "󰕾 {volume}%",
     "format-bluetooth": "󰂱 {volume}%",
     "format-muted": "󰖁",
     "scroll-step": 1,
@@ -74,71 +79,19 @@
     "tooltip-format": "Volume: {volume}%"
   },
 
-  "custom/pacman": {
-    "format": "  {}",
-    "interval": "once",
-    "exec": "checkupdates | wc -l",
-    "on-click": "update-system",
-    "signal": 8,
-    "tooltip-format": "{} updates available"
-  },
 
-  "custom/media": {
-    "format": "{}",
-    "escape": true,
-    "return-type": "json",
-    "max-length": 40,
-    "on-click": "playerctl play-pause",
-    "on-click-right": "playerctl stop",
-    "smooth-scrolling-threshold": 1, // This value was tested using a trackpad, it should be lowered if using a mouse.
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous",
-    "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources/custom_modules folder
+  "cpu": {
+    "format": " {usage}%"
   },
-
-  "clock": {
-    "format": "󰥔  {:%I:%M %p}",
-    "tooltip-format": "{:%A | %d-%m-%Y}"
+  "memory": {
+    "format": " {percentage}%",
+    "tooltip-format": "{used}/{total}"
   },
-
-  "hyprland/workspaces": {
-    "format": "{icon}",
-    "on-click": "activate",
-    "format-icons": {
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "10"
-    },
-    "persistent-workspaces": {
-      "*": 5 // 5 workspaces by default on every monitor
-    },
-    "sort-by-number": true
+  "disk": {
+    "format": "󰋊 {percentage_used}%",
+    "tooltip-format": "{used}/{total}"
   },
-
-  "backlight": {
-    "device": "intel_backlight",
-    "format": "{icon}   {percent}%",
-    "format-icons": ["󰃞", "󰃟", "󰃠"]
-  },
-
-  "custom/weather": {
-    "exec": "${HOME}/.config/waybar/scripts/get_weather.sh Morshi+MH",
-    "return-type": "json",
-    "format": "{}",
-    "tooltip": true,
-    "interval": 3600
-  },
-  "hyprland/window": {
-    "format": "{class}",
-    "separate-outputs": true,
-    "icon": true,
-    "icon-size": 18
-}
+  "temperature": {
+    "format": " {temperatureC}"
+  }
 }

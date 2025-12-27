@@ -1,10 +1,70 @@
-
-
 * {
-  font-family: "DM Sans", "JetBrainsMono Nerd Font Propo", sans-serif;
-  font-size: 14px;
-  border-radius: 5px;
-  font-weight: bold;
+    background-color: rgba(40, 40, 40, 0);
+    color: #ebdbb2;
+    font-family: "Monospace", sans-serif;
+    font-size: 14px;
+}
+
+
+#cpu {
+    font-size: 15px;
+    color: #B594EB; 
+    background-color: #1A1A1A; 
+    padding: 3px 8px; 
+    margin-top: 5px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+#custom-bluetooth {
+    font-size: 15px;
+    color: #C4D5E0; 
+    background-color: #1A1A1A; 
+    padding: 1px 10px 0px 10px;  
+    margin-top: 2px;
+    margin-right: 0px;
+    border-radius: 10px;
+}
+#memory {
+    font-size: 15px;
+    color: #FFB3CC; 
+    background-color: #1A1A1A; 
+    padding: 1px 8px 0px 10px; 
+    margin-top: 5px;
+    border-radius: 10px;
+}
+#disk {
+    font-size: 15px;
+    color: #FFC28F; 
+    background-color: #1A1A1A; 
+    padding: 1px 8px 0px 10px; 
+    margin-top: 5px;
+    border-radius: 10px;
+}
+#temperature {
+    font-size: 15px;
+    color: #FF9999; 
+    background-color: #1A1A1A; 
+    padding: 1px 8px 0px 10px; 
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+#clock {
+    color: rgb(216, 207, 192);
+    background-color: #1A1A1A; 
+    padding: 1px 8px 0px 10px; 
+    border-radius: 0px 0px 10px 10px; /* Закругление углов */
+}
+
+#pulseaudio
+{
+    font-size: 15px;
+    color: #e6aad2; 
+    background-color: #1A1A1A; 
+    padding: 1px 8px 0px 10px;  
+    margin-top: 2px;
+    margin-right: 8px;
+    border-radius: 10px;
 }
 
 window#waybar {
@@ -15,29 +75,36 @@ window#waybar {
 
 #workspaces {
   background-color: @background;
-  padding: 2px 2px 2px 2px;
+    padding: 1px 0px 0px 0px; 
   border-radius: 5px;
 }
 
 #workspaces button.active {
   background-color: @color1;
-  color: @foreground;
+  color: #aec6cf;
   padding: 5px 15px;
+  background-color: #1A1A1A; 
+  padding: 1px 8px 0px 8px; 
+  margin-top: 1px;
+    
+  border-radius: 10px;
 }
 
-#workspaces button.active:hover {
-  color: @background;
-  background: @color2;
-}
 
 #workspaces button.empty {
-  color: @foreground;
+    color: #aec6cf;
+    padding: 1px 8px 0px 8px; 
+  margin-top: 1px;
 }
+
 
 #workspaces button {
   background-color: @background;
-  color: @foreground;
+  color: #aec6cf;
   border: none;
+    padding: 1px 8px 0px 8px; 
+  border-radius: 10px;
+  margin-top: 1px;
   box-shadow: none;
   text-shadow: none;
   transition: background-color 0.6s ease, color 0.6s ease, padding-left 0.3s ease, padding-right 0.3s ease
@@ -46,6 +113,8 @@ window#waybar {
 
 #workspaces button:hover {
   background: @color4;
+      background-color: #1A1A1A; 
+
 }
 
 #workspaces button.urgent {
@@ -53,68 +122,70 @@ window#waybar {
   color: @background;
 }
 
-#battery,
-#pulseaudio,
-#backlight,
-#custom-pacman,
-#network,
-#bluetooth,
-#clock,
-#custom-weather,
-#custom-media,
-#window,
-#cpu,
-#memory,
-#disk,
-#tray,
-#custom-launcher,
-#custom-notification,
-#power-profiles-daemon {
-  color: @foreground;
-  background-color: @background;
-  padding: 0 15px 0 15px;
-  margin: 0 12px;
+
+
+
+/* BATTAREY */
+.warning {
+    font-size: 15px;
+    color: #FF994D; 
+    background-color: #1A1A1A; 
+    padding: 1px 8px 0px 10px; 
+    margin-top: 5px;
+    
+    border-radius: 10px;
+}
+.bad {
+    font-size: 15px;
+    color: #DB5A5A;
+    background-color: #1A1A1A;
+    padding: 1px 8px 0px 10px; 
+    margin-top: 5px;
+    border-radius: 10px;
+}
+.normal {
+    font-size: 15px;
+    color: #6CA8D0; 
+    background-color: #1A1A1A; 
+    padding: 1px 8px 0px 10px; 
+    margin-top: 5px;
+    border-radius: 10px;
+}
+.charging {
+    font-size: 15px;
+    color: #F0C450;
+    background-color: #1A1A1A; 
+    padding: 1px 8px 0px 10px; 
+    margin-top: 5px;
+    border-radius: 10px; 
 }
 
-#custom-volight,
-#custom-wifibt{
-  font-size: 16px;
-  color: @foreground;
-  background-color: @background;
-  padding: 0;
-  margin: 0;
+/* NETWORK */
+.ethernet {
+    font-size: 15px;
+    color: #9FCF9F; 
+    background-color: #1A1A1A; 
+    padding: 1px 8px 0px 10px; 
+    margin-top: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+}
+.wifi {
+    font-size: 15px;
+    color: #9FCF9F ; 
+    background-color: #1A1A1A; 
+    padding: 1px 8px 0px 10px; 
+    margin-top: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+}
+.disconnected {
+    font-size: 12px;
+    color: #B3B3B3; 
+    background-color: #1A1A1A; 
+    padding: 1px 8px 0px 10px; 
+    margin-top: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
 }
 
-#custom-volight {
-  padding-left: 15px;
-  padding-right: 10px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-#custom-wifibt {
-  padding-right: 15px;
-  padding-left: 10px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-#pulseaudio,
-#backlight,
-#network,
-#bluetooth {
-  margin : 0 6;
-}
-
-#window.hidden {
-    opacity: 0;
-    min-width: 0;
-    min-height: 0;
-    padding: 0;
-    margin: 0;
-    border: none;
-}
-
-window#waybar.empty #window {
-    background-color: transparent;
-}
