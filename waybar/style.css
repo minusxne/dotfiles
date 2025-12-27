@@ -2,13 +2,13 @@
     background-color: rgba(40, 40, 40, 0);
     color: #ebdbb2;
     font-family: "Monospace", sans-serif;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 
 #cpu {
     font-size: 15px;
-    color: #B594EB; 
+    color: rgb(216, 207, 192); 
     background-color: #1A1A1A; 
     padding: 3px 8px; 
     margin-top: 5px;
@@ -17,7 +17,7 @@
 }
 #custom-bluetooth {
     font-size: 15px;
-    color: #C4D5E0; 
+    color: rgb(216, 207, 192); 
     background-color: #1A1A1A; 
     padding: 1px 10px 0px 10px;  
     margin-top: 2px;
@@ -26,7 +26,7 @@
 }
 #memory {
     font-size: 15px;
-    color: #FFB3CC; 
+    color: rgb(216, 207, 192); 
     background-color: #1A1A1A; 
     padding: 1px 8px 0px 10px; 
     margin-top: 5px;
@@ -34,7 +34,7 @@
 }
 #disk {
     font-size: 15px;
-    color: #FFC28F; 
+    color: rgb(216, 207, 192); 
     background-color: #1A1A1A; 
     padding: 1px 8px 0px 10px; 
     margin-top: 5px;
@@ -42,7 +42,7 @@
 }
 #temperature {
     font-size: 15px;
-    color: #FF9999; 
+    color: rgb(216, 207, 192); 
     background-color: #1A1A1A; 
     padding: 1px 8px 0px 10px; 
     margin-top: 5px;
@@ -59,7 +59,7 @@
 #pulseaudio
 {
     font-size: 15px;
-    color: #e6aad2; 
+    color: rgb(216, 207, 192); 
     background-color: #1A1A1A; 
     padding: 1px 8px 0px 10px;  
     margin-top: 2px;
@@ -74,6 +74,7 @@ window#waybar {
 
 
 #workspaces {
+  color: rgb(216, 207, 192);
   background-color: @background;
     padding: 1px 0px 0px 0px; 
   border-radius: 5px;
