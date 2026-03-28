@@ -1,0 +1,51 @@
+ /* https://github.com/JaKooLit  */  
+ /* https://github.com/minusxne */
+ /* wallust template - colors-rofi */
+
+
+* {
+    active-background: #1A1A1A; /* Dark gray for active items */
+    active-foreground: #E0E0E0; /* Light gray for text */
+    normal-background: #0D0D0D;  /* Darkest gray for normal background */
+    normal-foreground: #E0E0E0;  /* Light gray for normal text */
+    urgent-background: #333333;   /* A slightly lighter gray for urgent items */
+    urgent-foreground: #E0E0E0;   /* Consistent foreground for urgent */
+
+    alternate-active-background: #1A1A1A; /* Same as active background */
+    alternate-active-foreground: #E0E0E0; 
+    alternate-normal-background: #0D0D0D; /* Consistent with normal background */
+    alternate-normal-foreground: #E0E0E0; 
+    alternate-urgent-background: #1A1A1A; /* Same for alternate urgent */
+    alternate-urgent-foreground: #E0E0E0; 
+
+    selected-active-background: #1A1A1A; /* Slightly lighter gray for selected */
+    selected-active-foreground: #E0E0E0; 
+    selected-normal-background: #1A1A1A;  /* Same for normal selected */
+    selected-normal-foreground: #E0E0E0; 
+    selected-urgent-background: #333333;  /* Consistent urgent color */
+    selected-urgent-foreground: #E0E0E0; 
+
+    background-color: #0D0D0D; /* Overall dark background */
+    background: rgba(0, 0, 0, 0.9); /* Opaque black */
+    foreground: #E0E0E0; /* Light gray text */
+    border-color: #1A1A1A; /* Dark gray for borders */
+
+    color0: #1A1A1A; /* Dark gray */
+    color1: #0D0D0D; /* Darkest gray */
+    color2: #1A1A1A; /* Dark gray */
+    color3: #333333; /* Light gray */
+    color4: #1A1A1A; /* Dark gray */
+    color5: #333333; /* Light gray */
+    color6: #1A1A1A; /* Dark gray */
+    color7: #E0E0E0; /* Light gray */
+    color8: #333333; /* Light gray */
+    color9: #0D0D0D; /* Darkest gray */
+    color10: #1A1A1A; /* Dark gray */
+    color11: #333333; /* Light gray */
+    color12: #1A1A1A; /* Dark gray */
+    color13: #333333; /* Light gray */
+    color14: #E0E0E0; /* Light gray for accents */
+    color15: #E0E0E0; /* Light gray for text */
+}
+
+
