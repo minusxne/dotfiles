@@ -1,6 +1,7 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-/* KooL Hyprland Rofi Style 4 */
-/* credit: https://github.com/adi1090x/rofi */
+/* https://github.com/JaKooLit */
+/* KooL Hyprland Rofi Style 4 Modified */
+/* https://github.com/minusxne */
+/* https://github.com/adi1090x/rofi */
 
 /*****----- Configuration -----*****/
 configuration {
@@ -64,7 +65,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       35%;
+    width:                       25%;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -83,10 +84,10 @@ window {
 /*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
-    spacing:                     10px;
+    spacing:                     0px;
     margin:                      0px;
-    padding:                     20px;
-    border:                      0px solid;
+    padding:                     0px;
+    border:                      2px solid;
     border-radius:               0px 0px 0px 0px;
     border-color:                @border-color;
     background-color:            inherit;
@@ -104,10 +105,10 @@ custombox {
 
 /*****----- Inputbar -----*****/
 inputbar {
-    enabled:                     false;
+    enabled:                     true;
     spacing:                     10px;
     margin:                      0px;
-    padding:                     8px 12px;
+    padding:                     2px 0px;
     border:                      0px solid;
     border-radius:               0px;
     border-color:                @border-color;
@@ -125,7 +126,6 @@ textbox-prompt-colon {
     enabled:                     true;
     padding:                     5px 0px;
     expand:                      false;
-    str:                         " 🔎";
     background-color:            inherit;
     text-color:                  inherit;
 }
@@ -167,7 +167,7 @@ case-indicator {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       3;
+    lines:                       7;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -198,7 +198,7 @@ element {
     enabled:                     true;
     spacing:                     10px;
     margin:                      0px;
-    padding:                     10px;
+    padding:                     0px;
     border:                      0px solid;
     border-radius:               0px;
     border-color:                @border-color;
